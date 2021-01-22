@@ -6,6 +6,10 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import 'homewidget.dart';
 
+String name;
+String email;
+String imageUrl;
+
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn googleSignIn = GoogleSignIn();
 
@@ -26,6 +30,14 @@ Future<String> signInWithGoogle() async {
   final User user = authResult.user;
 
   if (user != null) {
+    assert(user.email != null);
+    assert(user.displayName != null);
+    assert(user.photoURL != null);
+
+    name = user.displayName;
+    email = user.email;
+    imageUrl = user.photoURL;
+
     assert(!user.isAnonymous);
     assert(await user.getIdToken() != null);
 
@@ -33,6 +45,10 @@ Future<String> signInWithGoogle() async {
     assert(user.uid == currentUser.uid);
 
     print('signInWithGoogle succeeded: $user');
+
+    if (name.contains(" ")) {
+      name = name.substring(0, name.indexOf(" "));
+    }
 
     return '$user';
   }
@@ -112,7 +128,7 @@ class _LoginState extends State<Login> {
                         "Sign in with Google",
                         style: TextStyle(
                             color: Colors.white,
-                            fontFamily: "Roboto Medium",
+                            fontFamily: "Roboto",
                             fontSize: 18),
                       ),
                     ],

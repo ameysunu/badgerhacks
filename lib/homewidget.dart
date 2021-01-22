@@ -18,42 +18,34 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: HexColor('#FFC1B2'),
+          backgroundColor: HexColor('#FFDFCA'),
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedIndex,
           showSelectedLabels: true,
           items: [
             BottomNavigationBarItem(
-              icon: new Icon(Icons.library_books, color: HexColor('#545E78')),
+              icon: new Icon(Icons.smart_button, color: HexColor('#545E78')),
               title: new Text(
-                'Tutorials',
-                style: TextStyle(
-                    color: HexColor('#545E78'), fontFamily: 'Roboto Medium'),
+                'Drag and Drop',
+                style:
+                    TextStyle(color: HexColor('#545E78'), fontFamily: 'Roboto'),
               ),
             ),
             BottomNavigationBarItem(
-              icon:
-                  new Icon(Icons.horizontal_split, color: HexColor('#545E78')),
+              icon: new Icon(Icons.notes, color: HexColor('#545E78')),
               title: new Text(
-                'Split',
-                style: TextStyle(
-                    color: HexColor('#545E78'), fontFamily: 'Roboto Medium'),
+                'My Notes',
+                style:
+                    TextStyle(color: HexColor('#545E78'), fontFamily: 'Roboto'),
               ),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.help_center, color: HexColor('#545E78')),
+              icon: new Icon(Icons.panorama_photosphere,
+                  color: HexColor('#545E78')),
               title: new Text(
-                'Quiz',
-                style: TextStyle(
-                    color: HexColor('#545E78'), fontFamily: 'Roboto Medium'),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.person, color: HexColor('#545E78')),
-              title: new Text(
-                'User',
-                style: TextStyle(
-                    color: HexColor('#545E78'), fontFamily: 'Roboto Medium'),
+                'Flyers',
+                style:
+                    TextStyle(color: HexColor('#545E78'), fontFamily: 'Roboto'),
               ),
             ),
           ],

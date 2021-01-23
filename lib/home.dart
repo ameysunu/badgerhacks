@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'chatbot.dart';
 import 'login.dart';
 
 bool isSuccessful = false;
@@ -477,7 +478,13 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.black,
         child: Icon(Icons.chat),
         onPressed: () {
-          print("Chat triggered");
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) {
+                return Chat();
+              },
+            ),
+          );
         },
       ),
     );

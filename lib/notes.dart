@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import 'pages/voicenote.dart';
+
 final titleController = TextEditingController();
 final firestoreInstance = FirebaseFirestore.instance;
 AsyncSnapshot<DocumentSnapshot> snapshot;
@@ -236,7 +238,13 @@ class _AddNotesState extends State<AddNotes> {
                     borderRadius: BorderRadius.circular(20.0),
                     side: BorderSide(color: HexColor('#FF84AF'))),
                 onPressed: () {
-                  null;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Voice();
+                      },
+                    ),
+                  );
                 },
                 color: Colors.white,
                 textColor: HexColor('#FF84AF'),

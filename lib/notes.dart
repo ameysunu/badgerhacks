@@ -1,3 +1,4 @@
+import 'package:badgerhacks/pages/addnote.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -203,7 +204,13 @@ class _AddNotesState extends State<AddNotes> {
                     borderRadius: BorderRadius.circular(20.0),
                     side: BorderSide(color: HexColor('#FF84AF'))),
                 onPressed: () {
-                  null;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return NoteCreate();
+                      },
+                    ),
+                  );
                 },
                 color: Colors.white,
                 textColor: HexColor('#FF84AF'),

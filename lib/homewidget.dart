@@ -1,5 +1,6 @@
 import 'package:badgerhacks/home.dart';
 import 'package:badgerhacks/notes.dart';
+import 'package:badgerhacks/suggestions.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -15,6 +16,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   final List<Widget> _widgetOptions = [
     Home(),
     Notes(),
+    Suggestions(),
   ];
 
   Widget build(BuildContext context) {
@@ -37,6 +39,14 @@ class _HomeWidgetState extends State<HomeWidget> {
               icon: new Icon(Icons.notes, color: HexColor('#FFFFFF')),
               title: new Text(
                 'My Notes',
+                style:
+                    TextStyle(color: HexColor('#FFFFFF'), fontFamily: 'Roboto'),
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.spa, color: HexColor('#FFFFFF')),
+              title: new Text(
+                'Suggestions',
                 style:
                     TextStyle(color: HexColor('#FFFFFF'), fontFamily: 'Roboto'),
               ),

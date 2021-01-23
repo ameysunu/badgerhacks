@@ -135,12 +135,12 @@ class _VoiceState extends State<Voice> {
                           ? Icon(
                               Icons.stop,
                               size: 30,
-                              color: HexColor('#A8617A'),
+                              color: HexColor('#000000'),
                             )
                           : Icon(
                               Icons.multitrack_audio,
                               size: 30,
-                              color: HexColor('#A8617A'),
+                              color: HexColor('#000000'),
                             ),
                       onPressed:
                           recognizing ? stopRecording : streamingRecognize,
@@ -171,7 +171,7 @@ class _RecognizeContent extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.4,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: HexColor('#DC7196'),
+              color: HexColor('#353535'),
             ),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -208,20 +208,20 @@ class _RecognizeContent extends StatelessWidget {
             child: RaisedButton(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: HexColor('#FF84AF'))),
+                  side: BorderSide(color: HexColor('#FFFFFF'))),
               onPressed: () {
                 newVoice();
                 print("done");
                 Navigator.pop(context);
               },
               color: Colors.white,
-              textColor: HexColor('#FF84AF'),
+              textColor: HexColor('#000000'),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Center(
                     child: Text("Done".toUpperCase(),
-                        style: TextStyle(fontFamily: 'Gotham')),
+                        style: TextStyle(fontFamily: 'Roboto')),
                   ),
                 ],
               ),

@@ -128,19 +128,19 @@ class _VoiceState extends State<Voice> {
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: CircleAvatar(
-                    backgroundColor: Colors.white,
+                    backgroundColor: Colors.red,
                     radius: 40,
                     child: IconButton(
                       icon: recognizing
                           ? Icon(
                               Icons.stop,
                               size: 30,
-                              color: HexColor('#000000'),
+                              color: Colors.white,
                             )
                           : Icon(
                               Icons.multitrack_audio,
                               size: 30,
-                              color: HexColor('#000000'),
+                              color: Colors.white,
                             ),
                       onPressed:
                           recognizing ? stopRecording : streamingRecognize,

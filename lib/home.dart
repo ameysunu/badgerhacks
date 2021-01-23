@@ -35,24 +35,53 @@ class _HomeState extends State<Home> {
                       borderRadius: BorderRadius.circular(15.0),
                       color: Colors.white,
                     ),
-                    child: Column(
-                      children: [
-                        Text(
-                          "ACROPOLIS",
-                          style: TextStyle(
-                              fontFamily: 'ArimaMadurai',
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "Athens, Greece",
-                          style: TextStyle(
-                            fontFamily: 'ArimaMadurai',
-                            fontSize: 15,
+                    child: isSuccessful
+                        ? Column(
+                            children: [
+                              Text(
+                                "CAVE SANTORINI",
+                                style: TextStyle(
+                                    fontFamily: 'ArimaMadurai',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Santorini, Greece",
+                                style: TextStyle(
+                                  fontFamily: 'ArimaMadurai',
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ],
+                          )
+                        : Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 1,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15.0),
+                                color: Colors.white,
+                              ),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "ACROPOLIS",
+                                    style: TextStyle(
+                                        fontFamily: 'ArimaMadurai',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "Athens, Greece",
+                                    style: TextStyle(
+                                      fontFamily: 'ArimaMadurai',
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
                   ),
                 ),
                 feedback: Padding(
@@ -87,34 +116,6 @@ class _HomeState extends State<Home> {
                 childWhenDragging: Container(
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
-                // childWhenDragging: Padding(
-                //   padding: const EdgeInsets.all(10.0),
-                //   child: Container(
-                //     width: MediaQuery.of(context).size.width * 1,
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(15.0),
-                //       color: Colors.white,
-                //     ),
-                //     child: Column(
-                //       children: [
-                //         Text(
-                //           "CAVE SANTORINI",
-                //           style: TextStyle(
-                //               fontFamily: 'ArimaMadurai',
-                //               fontSize: 20,
-                //               fontWeight: FontWeight.bold),
-                //         ),
-                //         Text(
-                //           "Santorini, Greece",
-                //           style: TextStyle(
-                //             fontFamily: 'ArimaMadurai',
-                //             fontSize: 15,
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 5.0, 10, 5),

@@ -269,7 +269,7 @@ class _MyFlyersState extends State<MyFlyers> {
                                             Padding(
                                               padding:
                                                   const EdgeInsets.all(10.0),
-                                              child: Text(
+                                              child: SelectableText(
                                                   groupUsers[index]
                                                       .data()['flyer'],
                                                   style: TextStyle(

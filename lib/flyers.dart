@@ -174,6 +174,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     }).then((_) {
                       print("success!");
                     });
+                    setState(() {
+                      text = "";
+                    });
                   },
                   color: Colors.white,
                   textColor: HexColor('#000000'),

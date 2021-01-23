@@ -1,3 +1,4 @@
+import 'package:badgerhacks/flyers.dart';
 import 'package:badgerhacks/home.dart';
 import 'package:badgerhacks/notes.dart';
 import 'package:badgerhacks/suggestions.dart';
@@ -17,6 +18,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     Home(),
     Notes(),
     Suggestions(),
+    Flyer(),
   ];
 
   Widget build(BuildContext context) {

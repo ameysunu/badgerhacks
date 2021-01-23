@@ -181,19 +181,19 @@ class _RecognizeContent extends StatelessWidget {
                   controller: voiceController,
                   keyboardType: TextInputType.multiline,
                   maxLines: null,
-                  style: TextStyle(color: Colors.white, fontFamily: 'Gotham'),
+                  style: TextStyle(color: Colors.white, fontFamily: 'Roboto'),
                   decoration: new InputDecoration(
                     focusedBorder: InputBorder.none,
                     errorBorder: InputBorder.none,
                     disabledBorder: InputBorder.none,
                     enabledBorder: InputBorder.none,
                     hintStyle: TextStyle(
-                      fontFamily: 'Gotham',
+                      fontFamily: 'Roboto',
                       color: Colors.black54,
                       fontSize: 15,
                     ),
                     labelStyle:
-                        TextStyle(fontFamily: 'Gotham', color: Colors.white),
+                        TextStyle(fontFamily: 'Roboto', color: Colors.white),
                     // hintText: "Sup dawg",
                   ),
                 ),

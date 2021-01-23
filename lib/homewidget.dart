@@ -18,34 +18,34 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: HexColor('#FFDFCA'),
+          backgroundColor: HexColor('#000000'),
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedIndex,
           showSelectedLabels: true,
           items: [
             BottomNavigationBarItem(
-              icon: new Icon(Icons.smart_button, color: HexColor('#545E78')),
+              icon: new Icon(Icons.smart_button, color: HexColor('#FFFFFF')),
               title: new Text(
                 'Drag and Drop',
                 style:
-                    TextStyle(color: HexColor('#545E78'), fontFamily: 'Roboto'),
+                    TextStyle(color: HexColor('#FFFFFF'), fontFamily: 'Roboto'),
               ),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.notes, color: HexColor('#545E78')),
+              icon: new Icon(Icons.notes, color: HexColor('#FFFFFF')),
               title: new Text(
                 'My Notes',
                 style:
-                    TextStyle(color: HexColor('#545E78'), fontFamily: 'Roboto'),
+                    TextStyle(color: HexColor('#FFFFFF'), fontFamily: 'Roboto'),
               ),
             ),
             BottomNavigationBarItem(
               icon: new Icon(Icons.panorama_photosphere,
-                  color: HexColor('#545E78')),
+                  color: HexColor('#FFFFFF')),
               title: new Text(
                 'Flyers',
                 style:
-                    TextStyle(color: HexColor('#545E78'), fontFamily: 'Roboto'),
+                    TextStyle(color: HexColor('#FFFFFF'), fontFamily: 'Roboto'),
               ),
             ),
           ],

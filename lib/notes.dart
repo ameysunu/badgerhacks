@@ -79,9 +79,6 @@ class _NotesState extends State<Notes> {
                                           borderRadius:
                                               BorderRadius.circular(15.0),
                                         ),
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.1,
                                         width:
                                             MediaQuery.of(context).size.width *
                                                 1,
@@ -122,7 +119,7 @@ class _NotesState extends State<Notes> {
                                         onPressed: () {
                                           print("Delete triggered");
                                           firestoreInstance
-                                              .collection('blog')
+                                              .collection('notes')
                                               .doc(groupUsers[index]
                                                   .data()['id'])
                                               .delete()

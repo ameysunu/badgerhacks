@@ -127,7 +127,7 @@ void newRecord() async {
       .doc(
           '${now.hour.toString()}${now.minute.toString()}${now.second.toString()}')
       .set({
-    "body": bodyController.text,
+    "title": bodyController.text,
     "id":
         '${now.hour.toString()}${now.minute.toString()}${now.second.toString()}',
   }).then((_) {

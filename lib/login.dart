@@ -71,9 +71,9 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#FFE8F7'),
+      backgroundColor: HexColor('#FFFFFF'),
       appBar: AppBar(
-        backgroundColor: HexColor('#FFE8F7'),
+        backgroundColor: HexColor('#FFFFFF'),
         elevation: 0,
         title: Text(
           "Login",

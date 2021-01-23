@@ -472,6 +472,13 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        child: Icon(Icons.chat),
+        onPressed: () {
+          print("Chat triggered");
+        },
+      ),
     );
   }
 }

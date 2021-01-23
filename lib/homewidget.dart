@@ -1,4 +1,5 @@
 import 'package:badgerhacks/home.dart';
+import 'package:badgerhacks/notes.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -13,6 +14,7 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   final List<Widget> _widgetOptions = [
     Home(),
+    Notes(),
   ];
 
   Widget build(BuildContext context) {

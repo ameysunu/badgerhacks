@@ -31,6 +31,22 @@ class _NotesState extends State<Notes> {
           'My Notes'.toUpperCase(),
           style: TextStyle(fontFamily: 'ArimaMadurai', color: Colors.black),
         ),
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.add,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AddNotes();
+                    },
+                  ),
+                );
+              })
+        ],
       ),
       body: Container(
         child: Container(
@@ -79,10 +95,11 @@ class _NotesState extends State<Notes> {
                                                   groupUsers[index]
                                                       .data()['title'],
                                                   style: TextStyle(
-                                                      fontFamily: 'Gotham',
+                                                      fontFamily:
+                                                          'ArimaMadurai',
                                                       fontSize: 20,
                                                       color:
-                                                          HexColor('#A8617A'))),
+                                                          HexColor('#000000'))),
                                             ),
                                           ],
                                         )),
@@ -128,6 +145,110 @@ class _NotesState extends State<Notes> {
             },
           ),
         ),
+      ),
+    );
+  }
+}
+
+class AddNotes extends StatefulWidget {
+  @override
+  _AddNotesState createState() => _AddNotesState();
+}
+
+class _AddNotesState extends State<AddNotes> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.cancel,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              })
+        ],
+      ),
+      body: Column(
+        children: [
+          Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  "Add a Note",
+                  style: TextStyle(fontFamily: 'ArimaMadurai', fontSize: 30),
+                ),
+              )),
+          // ignore: deprecated_member_use
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+                height: MediaQuery.of(context).size.height * 0.3,
+                width: MediaQuery.of(context).size.width * 1,
+                child: Image.asset('images/create.png')),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ButtonTheme(
+              height: 50,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: HexColor('#FF84AF'))),
+                onPressed: () {
+                  null;
+                },
+                color: Colors.white,
+                textColor: HexColor('#FF84AF'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text("Create a Note".toUpperCase(),
+                          style: TextStyle(fontFamily: 'Roboto')),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.05,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ButtonTheme(
+              height: 50,
+              // ignore: deprecated_member_use
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: HexColor('#FF84AF'))),
+                onPressed: () {
+                  null;
+                },
+                color: Colors.white,
+                textColor: HexColor('#FF84AF'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text("Voice Note".toUpperCase(),
+                          style: TextStyle(fontFamily: 'Roboto')),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
